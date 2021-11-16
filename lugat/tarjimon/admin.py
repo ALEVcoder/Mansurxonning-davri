@@ -1,0 +1,13 @@
+from django.contrib import admin
+from django.contrib.admin.options import ModelAdmin
+from .models import Lugat
+
+
+
+# Register your models here.
+
+class LugatAdmin(admin.ModelAdmin):
+    list_display = ['inglizcha', 'uzbekcha']
+
+
+admin.site.register(Lugat, LugatAdmin)
